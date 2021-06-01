@@ -1,8 +1,43 @@
 header {
   background-color: #c4c4c4;
-  text-align: center;
+  align-items: center;
+  width: 100%;
 }
 
 body {
+  margin: 0;
   background-color: #ffffff;
+}
+
+#title {
+  margin-top: 0;
+  text-align: center;
+}
+
+main {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+
+#description {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 10px;
+}
+
+#content {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 10px;
+}
+
+#dog-update-button {
+  width: 10%;
+  float: right;
 }

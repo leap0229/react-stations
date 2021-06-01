@@ -3,31 +3,43 @@
 import React, { useState } from 'react'
 import './App.css'
 
+const DOGAPIURL = 'https://dog.ceo/api/breeds/image/random'
 /**
  *
  * @type {React.FC}
  */
 export const App = () => {
-  const DOGAPIURL = 'https://dog.ceo/api/breeds/image/random'
-
   const [dogUrl, setDogUrl] = useState(
     'https://images.dog.ceo/breeds/germanshepherd/n02106662_597.jpg',
   )
 
   const updateDogUrl = async () => {
     const res = await fetch(DOGAPIURL)
-    const { message } = await res.json()
-    setDogUrl(message)
+    if (!res.ok) return
+
+    const { message, status } = await res.json()
+
+    if (status === 'success') {
+      setDogUrl(message)
+    }
   }
 
   return (
     <>
-      <header>Dog App</header>
-      <div>
-        <h2>犬の画像を表示するサイト</h2>
-        <img className="card" src={dogUrl}></img>
-        <button onClick={updateDogUrl}>更新</button>
-      </div>
+      <header>
+        <h1 id="title">Dog App</h1>
+      </header>
+      <main>
+        <h2 id="description">犬の画像を表示するサイト</h2>
+        <div id="content">
+          <img id="dog-img" src={dogUrl}></img>
+          <div id="dog-button">
+            <button id="dog-update-button" onClick={updateDogUrl}>
+              更新
+            </button>
+          </div>
+        </div>
+      </main>
     </>
   )
 }
