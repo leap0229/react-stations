@@ -25,7 +25,7 @@ export const App = () => {
       <header>Dog App</header>
       <div>
         <h2>犬の画像を表示するサイト</h2>
-        <img src={dogUrl}></img>
+        <img className="card" src={dogUrl}></img>
         <button onClick={updateDogUrl}>更新</button>
       </div>
     </>
