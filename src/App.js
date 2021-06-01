@@ -12,7 +12,8 @@ export const App = () => {
     <>
       <header>Dog App</header>
       <div>
-        <h2>Hello, world!</h2>
+        <h2>犬の画像を表示するサイト</h2>
+        <img src="https://images.dog.ceo/breeds/germanshepherd/n02106662_597.jpg"></img>
       </div>
     </>
   )
