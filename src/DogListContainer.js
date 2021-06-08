@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import { BreedsSelect } from './BreedsSelect'
 
 const DOGAPIURL = 'https://dog.ceo/api/breeds/list/all'
 
 // DO NOT DELETE
 export const DogListContainer = () => {
-  // eslint-disable-next-line no-unused-vars
   const [breeds, setBreeds] = useState([])
+  const [selectedBreed, setSelectedBreed] = useState('')
 
   useEffect(() => {
     const initializeBreeds = async () => {
@@ -15,7 +16,7 @@ export const DogListContainer = () => {
       const { message, status } = await res.json()
 
       if (status === 'success') {
-        setBreeds(message)
+        setBreeds(Object.keys(message))
       }
     }
 
@@ -24,7 +25,13 @@ export const DogListContainer = () => {
 
   return (
     <>
-      <div></div>
+      {breeds && (
+        <BreedsSelect
+          breeds={breeds}
+          selectHandler={setSelectedBreed}
+          selectedBreed={selectedBreed}
+        />
+      )}
     </>
   )
 }

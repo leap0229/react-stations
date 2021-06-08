@@ -15,9 +15,10 @@ export const App = () => {
     <>
       <Header />
       <main>
-        <DogListContainer />
         <Description />
       </main>
+
+      <DogListContainer />
     </>
   )
 }
