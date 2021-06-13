@@ -1,6 +1,8 @@
 // DO NOT DELETE
 import React from 'react'
 import PropTypes from 'prop-types'
+import Select from '@material-ui/core/Select'
+import MenuItem from '@material-ui/core/MenuItem'
 
 export const BreedsSelect = ({ breeds, selectHandler, selectedBreed }) => {
   const handleChange = event => {
@@ -8,13 +10,13 @@ export const BreedsSelect = ({ breeds, selectHandler, selectedBreed }) => {
   }
 
   return (
-    <select value={selectedBreed} onChange={handleChange}>
+    <Select value={selectedBreed} onChange={handleChange}>
       {breeds.map(breed => (
-        <option key={breed} value={breed}>
+        <MenuItem key={breed} value={breed}>
           {breed}
-        </option>
+        </MenuItem>
       ))}
-    </select>
+    </Select>
   )
 }
 

@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const DogImage = ({ url }) => {
-  return <img id="dog-img" src={url}></img>
+  return <img className="dog-img" src={url}></img>
 }
 
 DogImage.propTypes = {

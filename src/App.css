@@ -20,7 +20,7 @@ main {
   justify-content: space-around;
 }
 
-#description {
+.description {
   display: -webkit-flex;
   display: flex;
   align-items: center;
@@ -29,15 +29,10 @@ main {
   margin: 10px;
 }
 
-#content {
+.content {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
   width: 50%;
   margin: 10px;
-}
-
-#dog-update-button {
-  width: 10%;
-  float: right;
 }

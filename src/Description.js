@@ -1,6 +1,7 @@
 // DO NOT DELETE
 import React, { useState } from 'react'
 import { DogImage } from './DogImage'
+import Button from '@material-ui/core/Button'
 
 const DOGAPIURL = 'https://dog.ceo/api/breeds/image/random'
 
@@ -22,13 +23,13 @@ export const Description = () => {
 
   return (
     <>
-      <h2 id="description">犬の画像を表示するサイト</h2>
-      <div id="content">
+      <h2 className="description">犬の画像を表示するサイト</h2>
+      <div className="content">
         <DogImage url={dogUrl} />
-        <div id="dog-button">
-          <button id="dog-update-button" onClick={updateDogUrl}>
+        <div className="dog-button">
+          <Button onClick={updateDogUrl} variant="contained" color="primary">
             更新
-          </button>
+          </Button>
         </div>
       </div>
     </>
