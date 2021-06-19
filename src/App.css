@@ -7,6 +7,11 @@ header {
 body {
   margin: 0;
   background-color: #ffffff;
+  height: 100%;
+}
+
+#root {
+  height: 80%;
 }
 
 #title {
@@ -17,22 +22,39 @@ body {
 main {
   display: -webkit-flex;
   display: flex;
-  justify-content: space-around;
+  height: 800px;
 }
 
 .description {
   display: -webkit-flex;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 50%;
+  align-items: center;
   margin: 10px;
+  width: 50%;
 }
 
 .content {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  justify-content: flex-end;
   margin: 10px;
+  width: 50%;
+}
+
+#dog-select {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+
+.dog-img {
+  object-fit: cover;
+  width: 100%;
+  height: 90%;
+}
+
+.dog-button {
+  margin-top: auto;
 }

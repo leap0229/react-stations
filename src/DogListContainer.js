@@ -57,15 +57,17 @@ export const DogListContainer = () => {
   return (
     <>
       {breeds.length !== 0 && (
-        <BreedsSelect
-          breeds={breeds}
-          selectHandler={setSelectedBreed}
-          selectedBreed={selectedBreed}
-        />
+        <div id="dog-select">
+          <BreedsSelect
+            breeds={breeds}
+            selectHandler={setSelectedBreed}
+            selectedBreed={selectedBreed}
+          />
+          <Button onClick={updateDogUrls} variant="contained" color="primary">
+            表示
+          </Button>
+        </div>
       )}
-      <Button onClick={updateDogUrls} variant="contained" color="primary">
-        表示
-      </Button>
 
       {dogUrls.length !== 0 && dogImagesList()}
     </>
